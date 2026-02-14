@@ -60,9 +60,9 @@ fn is_bool(field: &Type) -> bool {
             let field_type = path_segment.ident.to_string();
             return field_type == "bool";
         }
-        panic!("WTF IS THIS I DUNNO 2");
+        return false;
     }
-    panic!("WTF IS THIS I DUNNO");
+    false
 }
 
 fn extract_arg_field_attrs(ast: &mut DeriveInput) -> deluxe::Result<BTreeMap<String, ArgData>> {
